@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-button style ="display:flex;flex-wrap: nowrap; padding:0px;">
+    <span class = "home-button" style ="">
+      <img src="../../assets/newlogo.png" width="35px" alt="" style="margin-right: 10px; border-radius: 7px"/>
+      <h2>D'Arcy Development</h2>
+    </span>
+  </button>
+
+   <div class="flex-stretch"></div>
+   <div mat-menu-item class="dark-mode-toggle">
+    <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
+    <mat-icon *ngIf="!isDarkMode" class="mr-8" color="accent">wb_sunny</mat-icon>
+
+     <mat-slide-toggle [formControl]="toggleControl" class="mr-3"></mat-slide-toggle>
+    </div>
+</mat-toolbar>
