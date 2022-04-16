@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/dev-notes-webapp",
+    "public": "dist/portfolio-remastered",
     "ignore": [
       "firebase.json",
       "**/.*",

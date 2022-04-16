@@ -7,7 +7,7 @@ import { Component} from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'dev-notes-webapp';
+  title = 'portfolio-remastered';
 
  
   constructor() { 

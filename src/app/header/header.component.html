@@ -1,12 +1,14 @@
 <mat-toolbar color="primary">
   <button mat-button style ="display:flex;flex-wrap: nowrap; padding:0px;">
     <span class = "home-button" style ="">
-      <img src="../../assets/newlogo.png" width="35px" alt="" style="margin-right: 10px; border-radius: 7px"/>
-      <h2>D'Arcy Development</h2>
+      <img src="../../assets/newlogo.png" height="30px" alt="" style="margin-right: 5px; border-radius: 7px"/>
     </span>
   </button>
+  <div class="flex-stretch">
+    <h2 style ="font-size:25px; display:flex; align-items: center; justify-content: center" class="accent">D'ARCY DEVELOPMENT</h2>
 
-   <div class="flex-stretch"></div>
+  </div>
+  
    <div mat-menu-item class="dark-mode-toggle">
     <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
     <mat-icon *ngIf="!isDarkMode" class="mr-8" color="accent">wb_sunny</mat-icon>
