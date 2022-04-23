@@ -16,16 +16,13 @@ $custom-typography: mat.define-typography-config(
   $font-family: "Roboto",
 );
 $portfolio-remastered-primary: mat.define-palette(
-  mat.$yellow-palette,
-  A400,
-  A200,
-  A100
+  mat.$blue-palette,
+  600,
+  
 );
 $portfolio-remastered-accent: mat.define-palette(
-  mat.$blue-palette,
-  A400,
-  A100,
-  A400
+  mat.$orange-palette,
+  500,
 );
 
 // The warn palette is optional (defaults to red).

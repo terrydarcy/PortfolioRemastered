@@ -9,17 +9,13 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  toggleControl = new FormControl(false);
-  user: any = false;
-  parentRef = this.overlay.getContainerElement().parentElement;
   isDarkMode: boolean = false;
-
+  toggleControl = new FormControl(false);
   @HostBinding('class') className = '';
-  darkModeLocal: boolean =
-    localStorage.getItem('darkMode') === 'true' ? true : false;
+  parentRef = this.overlay.getContainerElement().parentElement;
+  darkModeLocal: boolean = localStorage.getItem('darkMode') === 'true' ? true : false;
 
-  constructor(public overlay: OverlayContainer, public dialog: MatDialog, private cdr: ChangeDetectorRef) {
-  }
+  constructor(public overlay: OverlayContainer, public dialog: MatDialog, private cdr: ChangeDetectorRef) {}
   
   ngOnInit(): void {
     this.setDarkModeFromLocalStorage();
@@ -38,21 +34,7 @@ export class HeaderComponent implements OnInit {
     });
     this.cdr.detectChanges();
   }
-
-  // manualToggle() {
-  //   console.log(this.toggleControl.value);
-  //   switch (this.toggleControl.value) {
-  //     case true:
-  //       this.toggleControl.setValue(false);
-  //       break;
-  //       case false:
-  //         this.toggleControl.setValue(true);
-  //         break;
-  //       }
-  //       this.cdr.detectChanges();
-  //       console.log(this.toggleControl.value);
-  // }
-
+  
   setDarkModeFromLocalStorage = () => {
     if (this.darkModeLocal && this.parentRef) {
       this.cdr.detectChanges();

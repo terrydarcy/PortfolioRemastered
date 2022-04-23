@@ -1,18 +1,32 @@
 <mat-toolbar color="primary">
-  <button mat-button style ="display:flex;flex-wrap: nowrap; padding:0px;">
-    <span class = "home-button" style ="">
-      <img src="../../assets/newlogo.png" height="30px" alt="" style="margin-right: 5px; border-radius: 7px"/>
-      <h2 style ="font-size:22px; display:flex; align-items: center; justify-content: center" class="accent">D'ARCY DEV</h2>
-    </span>
-  </button>
-  <div class="flex-stretch">
-
-  </div>
-  
-   <div class="dark-mode-toggle">
-    <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
-    <mat-icon *ngIf="!isDarkMode" class="mr-8" color="accent">wb_sunny</mat-icon>
-
-     <mat-slide-toggle [formControl]="toggleControl" class="mr-3"></mat-slide-toggle>
+  <div class="flex-stretch home-button-container">
+    <div class="mobile-toggle nav-menu-list">
+      <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+      
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>HIRE</button>
+        <button mat-menu-item>PROJECTS</button>
+        <button mat-menu-item>CONTACT</button>
+      </mat-menu>
     </div>
+
+    <button mat-button class="home-button">
+      <span>
+        <h1 class="accent">&lt;&sol;&gt;</h1>
+        <h1>D'ARCY DEV</h1>
+      </span>
+     </button>
+  </div>
+
+  <div class="nav-menu-list flex-stretch web-toggle">
+    <button mat-button>HIRE</button>
+    <button mat-button>PROJECTS</button>
+    <button mat-button>CONTACT</button>
+  </div>
+
+  <div class="dark-mode-toggle flex-stretch">
+    <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
+    <mat-icon *ngIf="!isDarkMode" class="mr-8">wb_sunny</mat-icon>
+    <mat-slide-toggle [formControl]="toggleControl" class="mr-3"></mat-slide-toggle>
+  </div>
 </mat-toolbar>
