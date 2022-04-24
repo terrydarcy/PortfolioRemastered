@@ -5,8 +5,8 @@
     </h1>   
 </div>
 
-<div *ngIf="!githubLoading else loading">
-    <mat-card  *ngFor="let repo of repos">
+<div *ngIf="!githubLoading else loading" class="project-container">
+    <mat-card *ngFor="let repo of repos">
         <mat-card-title style="font-weight: bold; margin:0;">
             {{repo.name}}
         </mat-card-title>

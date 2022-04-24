@@ -1,6 +1,15 @@
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}
+ 
 mat-card {
-  max-width: 400px;
-  justify-content: center;
+   width: 350px;
+    justify-content: center;
   margin: 15px;
 
   mat-card-title {

@@ -33,6 +33,7 @@ import { SkillsComponent } from './home/skills/skills.component';
 import { AngularEmojisModule } from 'angular-emojis';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './home/projects/projects.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ProjectsComponent } from './home/projects/projects.component';
     AppRoutingModule,
     MatButtonModule,
     HttpClientModule,
+    MatGridListModule,
     MatToolbarModule,
     MatChipsModule,
     MatSlideToggleModule,
