@@ -1,18 +1,29 @@
 mat-card {
+  max-width: 400px;
+  justify-content: center;
+  margin: 15px;
 
-    max-width: 300px;
-    justify-content: center;
+  mat-card-title {
+    display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  mat-card-content {
+    padding-top: 10px;
+  }
 
-    mat-card-content {
-        padding-top: 10px;
-    }
+  mat-chip-list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
 
-    mat-chip-list {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-    }
+.projects-loading {
+  margin: 5px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
 }
