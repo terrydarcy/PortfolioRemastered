@@ -28,13 +28,17 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { IntoComponent } from './home/into/into.component';
+import { SkillsComponent } from './home/skills/skills.component';
+import { AngularEmojisModule } from 'angular-emojis';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    IntoComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatButtonModule,
     MatToolbarModule,
     MatSlideToggleModule,
+    AngularEmojisModule,
     MatDialogModule,
     MatDividerModule,
     MatExpansionModule,
