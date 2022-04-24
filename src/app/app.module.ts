@@ -31,6 +31,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { IntoComponent } from './home/into/into.component';
 import { SkillsComponent } from './home/skills/skills.component';
 import { AngularEmojisModule } from 'angular-emojis';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectsComponent } from './home/projects/projects.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +42,8 @@ import { AngularEmojisModule } from 'angular-emojis';
     FooterComponent,
     HomeComponent,
     IntoComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,9 @@ import { AngularEmojisModule } from 'angular-emojis';
     FormsModule,
     AppRoutingModule,
     MatButtonModule,
+    HttpClientModule,
     MatToolbarModule,
+    MatChipsModule,
     MatSlideToggleModule,
     AngularEmojisModule,
     MatDialogModule,
@@ -60,7 +67,6 @@ import { AngularEmojisModule } from 'angular-emojis';
       preventDuplicates: true,
     }),
     MatInputModule,
-    MatChipsModule,
     MatButtonToggleModule,
     MatIconModule,
     MatMenuModule,

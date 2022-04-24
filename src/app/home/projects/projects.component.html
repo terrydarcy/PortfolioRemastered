@@ -1,0 +1,17 @@
+<h1 style="text-align:center; font-weight:bold;">Projects</h1>   
+<mat-card style ="margin: 5px" *ngFor="let repo of repos">
+   <mat-card-title style="font-weight: bold; margin:0;">
+       {{repo.name}}
+   </mat-card-title>
+
+   <mat-card-content *ngIf="repo.languages">
+       <p>{{repo.description}}</p>
+       <mat-chip-list aria-label="repo langauges" *ngIf="repo.languages" >
+           <mat-chip selected *ngFor="let langauage of repo.languages" color="accent">{{langauage}}</mat-chip>
+        </mat-chip-list>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-flat-button color="primary" (click)="openRepo(repo.html_url)">View Repo</button>
+    </mat-card-actions>
+ </mat-card>
