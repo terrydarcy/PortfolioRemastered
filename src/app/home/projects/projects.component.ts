@@ -14,10 +14,10 @@ export class ProjectsComponent implements OnInit {
   constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
-    this.fetchAndFormatRepos();
+    this.getGitHubData();
   }
 
-  fetchAndFormatRepos() {
+  getGitHubData() {
     this.githubLoading = true;
     this.githubService.getGitHubRepos().subscribe((result) => {
       this.repos = result;
@@ -31,11 +31,15 @@ export class ProjectsComponent implements OnInit {
           repo.languages = Object.keys(result);
           this.githubLoading = false;
         })
+        this.githubService.getRepoContributors(repo.name).subscribe((result) => {
+          repo.contributions = Object.keys(result);
+          this.githubLoading = false;
+        })
       });
       //sorting repos by updated_at
       this.repos.sort((x, y) => {
-        const xDate = new Date(y.updated_at);
-        const yDate = new Date(x.updated_at);
+        const xDate = new Date(y.created_at);
+        const yDate = new Date(x.created_at);
         if(xDate < yDate) return -1;
         else if(xDate > yDate) return 1;
           else return 0;
@@ -48,9 +52,9 @@ export class ProjectsComponent implements OnInit {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  openRepo(repoURL: string) {
-    window.open(repoURL, "_blank");
-
+  navigateTo(url: string) {
+    window.open(url, "_blank");
   }
+ 
 
 }

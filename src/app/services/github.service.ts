@@ -19,4 +19,7 @@ export class GithubService {
   getRepoLanguages(repoName : string) {
     return this.http.get<any>(`https://api.github.com/repos/terrydarcy/${repoName}/languages`);
   }
+  getRepoContributors(repoName : string) {
+    return this.http.get<any>(`https://api.github.com/repos/terrydarcy/${repoName}/contributors`);
+  }
 }

@@ -1,8 +1,9 @@
-<div style="display:flex; align-items:center; justify-content:center;">
-    <angular-emojis [name]="'red_circle'" size="12"> </angular-emojis>
-    <h1 style="text-align:center; font-weight:bold; margin:0px; margin-left: 5px">
-        Projects On GitHub
-    </h1>   
+<div class="title_container">
+    <div class="title_row"> 
+        <angular-emojis [name]="'red_circle'" size="12"> </angular-emojis>
+        <h1 class="title_text">Projects On GitHub</h1>   
+    </div>
+        <p class="sorting_text">Sorted by - date created</p>
 </div>
 
 <div *ngIf="!githubLoading else loading" class="project-container">
@@ -14,12 +15,13 @@
         <mat-card-content *ngIf="repo.languages">
             <p>{{repo.description}}</p>
             <mat-chip-list aria-label="repo langauges" *ngIf="repo.languages" >
-                <mat-chip selected *ngFor="let langauage of repo.languages" color="accent">{{langauage}}</mat-chip>
+                <mat-chip  *ngFor="let langauage of repo.languages" color="accent">{{langauage}}</mat-chip>
             </mat-chip-list>
         </mat-card-content>
         
-        <mat-card-actions>
-            <button mat-flat-button color="primary" (click)="openRepo(repo.html_url)">View Project</button>
+        <mat-card-actions align="end" style = " ">
+            <button mat-raised-button color ="primary" *ngIf="repo.homepage" (click)="navigateTo(repo.homepage)">Visit Project</button>
+            <button mat-raised-button color="accent" (click)="navigateTo(repo.html_url)">Source Code</button>
         </mat-card-actions>
     </mat-card>
 </div>
