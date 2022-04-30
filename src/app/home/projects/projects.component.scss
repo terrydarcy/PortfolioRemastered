@@ -17,8 +17,9 @@
       margin-left: 5px;
     }
   }
-  .sorting_text {
+  .subtitle_row {
     filter: brightness(0.6);
+    margin:0px;
   }
 }
 
@@ -28,9 +29,12 @@
   flex-wrap: wrap;
   align-items: space-evenly;
   justify-content: flex-start;
-  padding-left: 200px;
-  padding-right: 200px;
-
+  margin-left: 100px;
+  margin-right: 100px;
+  // max-height: 700px;
+  overflow-y: auto;
+ 
+  
   .mat-card-header {
     flex-shrink: 0;
   }
@@ -42,8 +46,9 @@
 
 @media only screen and (max-width: 800px) {
   .project-container {
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding:0px;
   }
 }
 

@@ -34,6 +34,7 @@ import { AngularEmojisModule } from 'angular-emojis';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './home/projects/projects.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ServicesProvidedComponent } from './home/services-provided/services-provided.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     IntoComponent,
     SkillsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ServicesProvidedComponent
   ],
   imports: [
     BrowserModule,

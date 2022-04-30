@@ -1,0 +1,23 @@
+<div class="title_container">
+    <div class="title_row"> 
+        <angular-emojis [name]="'computer'" size="12"> </angular-emojis>
+        <h1 class="title_text">Services</h1>   
+    </div>
+        <p class="subtitle_row">Services I offer</p>
+</div>
+
+<div class="services-container">
+    <div *ngFor="let service of services" class="service-element">
+        <div class="service-icon">
+             <mat-icon style="font-size: 30px">web</mat-icon>
+        </div>
+        <div class="service-info">
+            <div class="service-title">
+                <h2>{{service.name}}</h2>
+            </div>
+            <div class="service-description">
+               <p>{{service.description}}</p> 
+            </div>
+        </div>
+    </div>
+</div>

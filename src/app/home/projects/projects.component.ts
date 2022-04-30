@@ -19,8 +19,8 @@ export class ProjectsComponent implements OnInit {
   getGitHubData() {
     this.githubLoading = true;
     this.githubService.getGitHubRepos().subscribe((result : any) => {
-      this.repos = result;
       this.githubLoading= false;
+      this.repos = result;
       console.log (this.repos);
     });
   }
