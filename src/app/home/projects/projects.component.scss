@@ -49,10 +49,10 @@
 
 mat-card {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  min-width: 350px;
+  min-width: 300px;
   margin: 10px;
   flex-grow: 4;
   flex: 2 2;
