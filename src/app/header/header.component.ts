@@ -2,6 +2,8 @@ import { Component, HostBinding, OnInit, ChangeDetectorRef} from '@angular/core'
 import { FormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { MatDialog } from '@angular/material/dialog';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 @Component({
   selector: 'app-header',
@@ -10,6 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class HeaderComponent implements OnInit {
   isDarkMode: boolean = false;
+  faCode = faCode as IconProp;
   toggleControl = new FormControl(false);
   @HostBinding('class') className = '';
   parentRef = this.overlay.getContainerElement().parentElement;

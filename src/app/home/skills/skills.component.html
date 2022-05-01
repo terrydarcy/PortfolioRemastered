@@ -1,20 +1,16 @@
 <div class="title_container">
-    <div class="title_row"> 
-        <angular-emojis [name]="'computer'" size="12"> </angular-emojis>
-        <h1 class="title_text">Skills</h1>   
-    </div>
-        <p class="subtitle_row">Services I can offer</p>
+  <div class="title_row">
+    <angular-emojis [name]="'computer'" size="20"> </angular-emojis>
+    <h1 class="title_text">Skills</h1>
+  </div>
+  <p class="subtitle_row">These are the skills I use to build applications</p>
 </div>
 
 <div class="skills-container">
-
-    <mat-card>
-        <mat-card-title>
-            <angular-emojis [name]="'computer'" size="12"> </angular-emojis>
-            <h1 class="title_text">Web Development</h1>
-        </mat-card-title>
-        <mat-card-subtitle align="center">
-            <p>I can build web applications using the following technologies:</p>
-        </mat-card-subtitle>
-    </mat-card>
+  <mat-chip-list   *ngIf="skills">
+    <mat-chip disableRipple matRipple matRippleRadius="10" *ngFor="let skill of skills" color="primary" class="skill-chip"> 
+        <fa-icon class="accent" [icon]="skill.icon" size="2x"></fa-icon>
+       {{ skill.name }}
+      </mat-chip>
+  </mat-chip-list>
 </div>

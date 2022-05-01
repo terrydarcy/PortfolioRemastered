@@ -19,8 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MatDividerModule} from '@angular/material/divider';
+ import {MatDividerModule} from '@angular/material/divider';
 import { ToastrModule } from 'ngx-toastr';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { HomeComponent } from './home/home.component';
@@ -35,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './home/projects/projects.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ServicesProvidedComponent } from './home/services-provided/services-provided.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -58,6 +58,7 @@ import { ServicesProvidedComponent } from './home/services-provided/services-pro
     MatButtonModule,
     HttpClientModule,
     MatGridListModule,
+    FontAwesomeModule,
     MatToolbarModule,
     MatChipsModule,
     MatSlideToggleModule,

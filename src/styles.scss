@@ -96,6 +96,9 @@ body {
 .accent {
   color: mat.get-color-from-palette($portfolio-remastered-accent) !important;
 }
+.primary {
+  color: mat.get-color-from-palette($portfolio-remastered-primary) !important;
+}
 .background_primary {
   background-color: mat.get-color-from-palette(
     $portfolio-remastered-primary,

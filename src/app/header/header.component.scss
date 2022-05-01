@@ -28,6 +28,13 @@ mat-toolbar {
         justify-content: center;
         flex-direction: row;
 
+        fa-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 5px;
+        }
+
         h1 {
           font-size: 25px; 
           margin-right:6px;
