@@ -1,13 +1,27 @@
 <mat-card class="info-container">
 
-    <img src="../../assets/profile.jpg" alt="Terry D'Arcy profile picture" class="intro-profile-image primary_border">
-    
+    <div style = "display:flex; flex-direction:column">
+
+        <img src="../../assets/profile.jpg" alt="Terry D'Arcy profile picture" class="intro-profile-image primary_border">
+        <div style ="display:flex; flex-direction:row; justify-content:center;">
+            <button mat-icon-button class="intro-button">
+                <fa-icon class="accent" [icon]="faInstagram" size="lg" style="margin:0"></fa-icon>
+            </button>
+            <button mat-icon-button class="intro-button">
+                <fa-icon class="accent"  [icon]="faTwitter" size="lg" style="margin:0"></fa-icon>
+            </button>
+            <button mat-icon-button class="intro-button">
+                <fa-icon class="accent" [icon]="faYoutube" size="lg" style="margin:0"></fa-icon>
+            </button>
+        </div>
+    </div>
+        
     <div class="bio">
         <H1 style="font-weight:bold;">Terry D'Arcy</H1>
         <table class="intro-table">
             <tr>
                 <td><angular-emojis [name]="'briefcase'" size="20"> </angular-emojis></td>
-                <td>Full Stack Software Engineer</td>
+                <td >Full Stack Software Engineer</td>
             </tr>
             <tr>
             <td> <h1 style="margin:0">👨‍🎓</h1></td>
@@ -19,6 +33,7 @@
                 <td>Dublin, Ireland</td>
             </tr>
         </table>
+        
     </div>
 </mat-card>
 
