@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GithubService } from '../../services/github.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GithubService } from '../../services/github.service';
 export class ProjectsComponent implements OnInit {
   repos!: [any];
   githubLoading: boolean = false;
-  
+ 
   constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {

@@ -23,12 +23,10 @@
     }
   }
 
-
- ::ng-deep .mat-chip-list .mat-chip-list-wrapper {
-       justify-content: center !important;
-       flex-wrap: wrap;
-
-   }
+//  ::ng-deep .mat-chip-list .mat-chip-list-wrapper {
+//        justify-content: center !important;
+//        flex-wrap: wrap;
+//    }
  
  .skills-container {
     display: flex;
@@ -55,7 +53,7 @@
       max-width: 800px;
       min-width: 200px;
 
-       fa-icon {
+      fa-icon {
         margin-right: 15px;
       }
     }

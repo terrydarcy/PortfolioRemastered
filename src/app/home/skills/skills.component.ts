@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faJava, faHtml5, faCss3, faJs, faAngular, faReact, faNode, faGoogle} from '@fortawesome/free-brands-svg-icons';
 import { faCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
@@ -10,6 +10,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'
  
 export class SkillsComponent implements OnInit {
 
+  @Input() target: any;
   faJava = faJava as IconProp;
   faHtml = faHtml5 as IconProp;
   faCss3 = faCss3 as IconProp;

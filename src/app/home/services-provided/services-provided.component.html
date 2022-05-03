@@ -6,11 +6,11 @@
         <p class="subtitle_row">Services I offer</p>
 </div>
 
-<div class="services-container">
+<mat-card class="services-container">
     <div *ngFor="let service of services" class="service-element">
-        <div class="service-icon">
+        <!-- <div class="service-icon">
              <mat-icon style="font-size: 30px">web</mat-icon>
-        </div>
+        </div> -->
         <div class="service-info">
             <div class="service-title">
                 <h2>{{service.name}}</h2>
@@ -20,4 +20,4 @@
             </div>
         </div>
     </div>
-</div>
+</mat-card>

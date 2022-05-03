@@ -6,3 +6,9 @@ export interface Note {
     timestamp: Date;
   }
   
+export enum scrollToEnum {
+  SKILLS = 'skillsTarget',
+  PROJECTS = 'projectsTarget',
+  SERVICES = 'servicesTarget',
+}
+  

@@ -1,6 +1,14 @@
 <div class="home-container">
-    <app-into class="component-spacer"></app-into>
-    <!-- <app-services-provided></app-services-provided>-->
-    <app-skills class="component-spacer"></app-skills> 
-    <app-projects></app-projects>
+    <div #introTarget  class="component-spacer">
+        <app-into #introTarget></app-into>
+    </div>
+    <div #skillsTarget  class="component-spacer">
+        <app-skills #skillsTarget></app-skills> 
+    </div>
+    <div #servicesTarget  class="component-spacer">
+        <app-services-provided></app-services-provided>
+    </div>
+    <div #projectsTarget  class="component-spacer">
+        <app-projects ></app-projects>
+    </div>
 </div>

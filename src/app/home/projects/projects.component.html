@@ -16,7 +16,7 @@
         <mat-card-content *ngIf="repo.languages">
             <p>{{repo.description}}</p>
             <mat-chip-list aria-label="repo langauges" *ngIf="repo.languages" >
-                <mat-chip  *ngFor="let langauage of repo.languages" color="primary" style="border: 2px solid" [ngStyle]="{'border-color': langauage.color}" class="project-chip" >{{langauage.name}}</mat-chip>
+                <mat-chip disableRipple *ngFor="let langauage of repo.languages" color="primary" style="border: 2px solid" [ngStyle]="{'border-color': langauage.color}" class="project-chip" >{{langauage.name}}</mat-chip>
             </mat-chip-list>
         </mat-card-content>
         

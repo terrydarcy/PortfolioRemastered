@@ -4,24 +4,24 @@
       <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
       
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>HIRE</button>
-        <button mat-menu-item>PROJECTS</button>
-        <button mat-menu-item>CONTACT</button>
+        <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.SKILLS)">SKILLS</button>
+        <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.SERVICES)">SERVICES</button>
+        <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.PROJECTS)">PROJECTS</button>
       </mat-menu>
     </div>
 
-    <button mat-button class="home-button">
+    <button mat-button class="home-button" (click)="resetScroll()">
       <span>
         <fa-icon class="accent" [icon]="faCode" size="2x"></fa-icon>
-        <h1>D'ARCY DEV</h1>
+        <h1 >D'ARCY DEV</h1>
       </span>
      </button>
   </div>
 
   <div class="nav-menu-list flex-stretch web-toggle">
-    <button mat-button>HIRE</button>
-    <button mat-button>PROJECTS</button>
-    <button mat-button>CONTACT</button>
+    <button mat-button (click)="setScrollToSubject(scrollToEnum.SKILLS)">SKILLS</button>
+    <button mat-button (click)="setScrollToSubject(scrollToEnum.SERVICES)">SERVICES</button>
+    <button mat-button (click)="setScrollToSubject(scrollToEnum.PROJECTS)">PROJECTS</button>
   </div>
 
   <div class="dark-mode-toggle flex-stretch">

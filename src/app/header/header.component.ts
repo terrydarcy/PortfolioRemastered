@@ -1,9 +1,12 @@
-import { Component, HostBinding, OnInit, ChangeDetectorRef} from '@angular/core';
+import { Component, HostBinding, OnInit, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { MatDialog } from '@angular/material/dialog';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { ScrollToService } from '../services/scroll-to.service';
+import { scrollToEnum } from '../models/Interfaces';
+var scrollToElement = require('scroll-to-element');
 
 @Component({
   selector: 'app-header',
@@ -17,8 +20,9 @@ export class HeaderComponent implements OnInit {
   @HostBinding('class') className = '';
   parentRef = this.overlay.getContainerElement().parentElement;
   darkModeLocal: boolean = localStorage.getItem('darkMode') === 'true' ? true : false;
+  scrollToEnum = scrollToEnum;
 
-  constructor(public overlay: OverlayContainer, public dialog: MatDialog, private cdr: ChangeDetectorRef) {}
+  constructor(public overlay: OverlayContainer, public dialog: MatDialog, private cdr: ChangeDetectorRef, private ScrollToService: ScrollToService) {}
   
   ngOnInit(): void {
     this.setDarkModeFromLocalStorage();
@@ -38,6 +42,16 @@ export class HeaderComponent implements OnInit {
     this.cdr.detectChanges();
   }
   
+  setScrollToSubject(value: string) {
+    this.ScrollToService.scrollToSubject.next(value);
+  }
+
+  resetScroll() {
+    let body = document.getElementsByTagName('body')[0];
+    scrollToElement(body, { offset: -70, ease: 'inQuad', duration: 300 });
+
+  }
+
   setDarkModeFromLocalStorage = () => {
     if (this.darkModeLocal && this.parentRef) {
       this.cdr.detectChanges();

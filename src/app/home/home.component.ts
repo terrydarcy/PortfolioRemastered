@@ -1,38 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ScrollToService } from '../services/scroll-to.service';
+import { scrollToEnum } from '../models/Interfaces';
+var scrollToElement = require('scroll-to-element');
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  config: any;
-  fullpage_api: any;
+  @ViewChild('projectsTarget') projectsTarget!: ElementRef;
+  @ViewChild('skillsTarget') skillsTarget!: ElementRef;
+  @ViewChild('servicesTarget') servicesTarget!: ElementRef;
 
-  constructor() {
-    // for more details on config options please visit fullPage.js docs
-    this.config = {
-
-      // fullpage options
-      licenseKey: 'YOUR LICENSE KEY HERE',
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-      menu: '#menu',
-
-      // fullpage callbacks
-      afterResize: () => {
-        console.log("After resize");
-      },
-      afterLoad: (origin:any, destination:any, direction:any) => {
-        console.log(origin.index);
-      }
-    };
-  }
-
-  getRef(fullPageRef :any) {
-    this.fullpage_api = fullPageRef;
-  }
+  constructor(private scrollToService: ScrollToService) {}
 
   ngOnInit(): void {
+    this.scrollToService.getScrollToSubject().subscribe((value: string) => {
+      if (value) this.scrollTo(value);
+    });
   }
 
+  scrollTo(el: string) {
+    const config = { offset: -70, ease: 'inQuad', duration: 300 };
+    switch (el) {
+      case scrollToEnum.PROJECTS:
+        scrollToElement(this.projectsTarget.nativeElement, config);
+        break;
+      case scrollToEnum.SKILLS:
+        scrollToElement(this.skillsTarget.nativeElement, config);
+        break;
+      case scrollToEnum.SERVICES:
+        scrollToElement(this.servicesTarget.nativeElement, config);
+        break;
+    }
+  }
 }
