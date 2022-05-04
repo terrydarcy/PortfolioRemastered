@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
+import { Component, HostBinding, OnInit, ChangeDetectorRef} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { MatDialog } from '@angular/material/dialog';

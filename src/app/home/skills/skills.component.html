@@ -7,10 +7,12 @@
 </div>
 
 <div class="skills-container">
-  <mat-chip-list   *ngIf="skills">
+  <mat-chip-list style="margin-left:10px; margin-right:10px;" *ngIf="skills">
     <mat-chip disableRipple matRipple matRippleRadius="10" *ngFor="let skill of skills" color="primary" class="skill-chip"> 
         <fa-icon class="accent" [icon]="skill.icon" size="2x"></fa-icon>
-       {{ skill.name }}
+       <h2 style="font-family: Inconsolata; margin:0">
+         {{ skill.name }}
+       </h2>
       </mat-chip>
   </mat-chip-list>
 </div>
