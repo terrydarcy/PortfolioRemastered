@@ -23,11 +23,11 @@
         <mat-divider inset></mat-divider>
         <mat-card-actions align="end">
             <div class="project-timestamp">
-                <mat-card-subtitle align="center" style="margin:0">{{repo.createdAtDate}}</mat-card-subtitle>
+                <mat-card-subtitle align="center" style="margin:0; margin-left:10px;">{{repo.createdAtDate}}</mat-card-subtitle>
             </div>
 
-            <div>
-                <button mat-flat-button color ="primary" *ngIf="repo.homepageUrl" style ="margin-right: 5px" (click)="navigateTo(repo.homepageUrl)">Visit Project</button>
+            <div  style ="margin-right: 10px">
+                <button mat-flat-button color ="primary" *ngIf="repo.homepageUrl" style ="margin-right: 5px" (click)="navigateTo(repo.homepageUrl)">Live Demo</button>
                 <button mat-flat-button color="accent" (click)="navigateTo(repo.url)" >Source Code</button>
             </div>
         </mat-card-actions>

@@ -35,7 +35,7 @@ import { ProjectsComponent } from './home/projects/projects.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ServicesProvidedComponent } from './home/services-provided/services-provided.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+ 
 
 @NgModule({
   declarations: [

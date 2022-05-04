@@ -1,54 +1,68 @@
-.intro-profile-image{
-    border-radius: 50%;
-    width: 150px;
-    margin: 0px;
- }
+.intro-profile-image {
+  border-radius: 50%;
+  width: 150px;
+  margin: 0px;
+}
 
+.info-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 250px;
+  max-width: 800px;
+  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 0px;
 
- .info-container {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: space-evenly;
-     min-width: 250px;
-     max-width: 800px;
-     margin: 15px;
-     margin-top: 15px;
-     margin-bottom: 0px;
-    
-     .intro-profile {
-        display:flex; flex-direction:column; margin-top:10px
-     }
-     
-     .bio {
-         min-width: 300px;
-         margin-left: 30px;
-         margin-bottom: 10px;
+  .intro-profile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 
-         .intro-button {
-                margin-right: 10px;
-         }
-     }
+    .intro-button {
+      margin-right: 10px;
+      margin: 5px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top:13px;
+      border: 1px solid
 
-    span {
-        display: flex;
-        flex-direction: row;
-     }
-
-     .intro-table {
-        tr {
-            td {
-                align-items: center;
-                justify-content: center;
-                padding: 5px;
-            }
-        }
-     }
- }
-
- @media only screen and (max-width: 800px) {
-    .info-container {
-      padding: 0px;
     }
   }
+
+  .bio {
+    min-width: 300px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro-table {
+    padding-left: 10px;
+    padding-right: 10px;
+    tr {
+      td {
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .info-container {
+    padding: 0px;
+  }
+}
