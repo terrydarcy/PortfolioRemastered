@@ -9,8 +9,16 @@
     margin-right: 50px;
     margin-bottom: 10px;
   }
+
+  @media only screen and (max-width: 800px) {
+    .home-divider {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+   }
+  }
 }
 
 .component-spacer {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }

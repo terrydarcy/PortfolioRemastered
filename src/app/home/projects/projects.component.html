@@ -7,31 +7,33 @@
 </div>
 
 <div *ngIf="!githubLoading else loading" class="project-container">
-    <mat-card *ngFor="let repo of repos">
-     
-        <mat-card-title style="font-weight: bold; margin:0;">
-            {{repo.name}}
-        </mat-card-title>
-        
-        <mat-card-content *ngIf="repo.languages">
-            <p>{{repo.description}}</p>
-            <mat-chip-list aria-label="repo langauges" *ngIf="repo.languages" >
-                <mat-chip disableRipple *ngFor="let langauage of repo.languages" color="primary" style="border: 2px solid" [ngStyle]="{'border-color': langauage.color}" class="project-chip" >{{langauage.name}}</mat-chip>
-            </mat-chip-list>
-        </mat-card-content>
-        
-        <mat-divider inset></mat-divider>
-        <mat-card-actions align="end">
-            <div class="project-timestamp">
-                <mat-card-subtitle align="center" style="margin:0; margin-left:10px;">{{repo.createdAtDate}}</mat-card-subtitle>
-            </div>
-
-            <div  style ="margin-right: 10px">
-                <button mat-flat-button color ="primary" *ngIf="repo.homepageUrl" style ="margin-right: 5px" (click)="navigateTo(repo.homepageUrl)">Live Demo</button>
-                <button mat-flat-button color="accent" (click)="navigateTo(repo.url)" >Source Code</button>
-            </div>
-        </mat-card-actions>
-    </mat-card>
+    <div class="projects">
+        <mat-card *ngFor="let repo of repos">
+            
+            <mat-card-title style="font-weight: bold; margin:0;">
+                {{repo.name}}
+            </mat-card-title>
+            
+            <mat-card-content *ngIf="repo.languages">
+                <p>{{repo.description}}</p>
+                <mat-chip-list aria-label="repo langauges" *ngIf="repo.languages" >
+                    <mat-chip disableRipple *ngFor="let langauage of repo.languages" color="primary" style="border: 2px solid" [ngStyle]="{'border-color': langauage.color}" class="project-chip" >{{langauage.name}}</mat-chip>
+                </mat-chip-list>
+            </mat-card-content>
+            
+            <mat-divider inset></mat-divider>
+            <mat-card-actions align="end">
+                <div class="project-timestamp">
+                    <mat-card-subtitle align="center" style="margin:0; margin-left:10px;">{{repo.createdAtDate}}</mat-card-subtitle>
+                </div>
+                
+                <div  style ="margin-right: 10px">
+                    <button mat-flat-button color ="primary" *ngIf="repo.homepageUrl" style ="margin-right: 5px" (click)="navigateTo(repo.homepageUrl)">Live Demo</button>
+                    <button mat-flat-button color="accent" (click)="navigateTo(repo.url)" >Source Code</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>
 
 <ng-template #loading>

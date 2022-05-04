@@ -31,9 +31,22 @@
   justify-content: flex-start;
   margin-left: 100px;
   margin-right: 100px;
-  max-height: 900px;
-  overflow-y: auto;
-
+  border: 0px dashed;
+  border-radius: 5px;
+  
+  .projects {
+    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+  justify-content: flex-start;
+    max-height: 900px;
+    margin-right: 10px;
+    overflow-y: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   .mat-card-header {
     flex-shrink: 0;
   }
@@ -45,9 +58,10 @@
 
 @media only screen and (max-width: 800px) {
   .project-container {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 0px;
+    
   }
 }
 
@@ -58,8 +72,8 @@ mat-card {
   flex-wrap: wrap;
   min-width: 300px;
   margin: 10px;
-  flex-grow: 4;
-  flex: 2 2;
+  flex-grow: 3;
+  flex: 1;
 
   mat-card-title {
     display: flex;
