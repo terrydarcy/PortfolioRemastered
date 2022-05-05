@@ -9,12 +9,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
-  min-width: 250px;
-  max-width: 800px;
+  justify-content: center;
   margin: 15px;
   margin-top: 15px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
+
+  mat-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
   .intro-profile {
     display: flex;

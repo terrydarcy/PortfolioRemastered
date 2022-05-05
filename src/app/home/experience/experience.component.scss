@@ -1,0 +1,43 @@
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  align-items: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.experience-card {
+  margin: 10px;
+  flex: 1;
+  min-width: 300px;
+  flex-grow: 1;
+  max-width: 800px;
+  margin-bottom: 0px;
+
+  .compango-logo {
+    border-radius: 50%;
+    border: 1px solid;
+  }
+
+  mat-card-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .experience-container {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px;
+  }
+}

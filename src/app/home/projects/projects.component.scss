@@ -1,27 +1,4 @@
-.title_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 
-  .title_row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    .title_text {
-      text-align: center;
-      font-weight: bold;
-      margin: 0px;
-      margin-left: 5px;
-    }
-  }
-  .subtitle_row {
-    filter: brightness(0.6);
-    margin: 0px;
-  }
-}
 
 .project-container {
   display: flex;

@@ -35,6 +35,7 @@ import { ProjectsComponent } from './home/projects/projects.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ServicesProvidedComponent } from './home/services-provided/services-provided.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ExperienceComponent } from './home/experience/experience.component';
  
 
 @NgModule({
@@ -46,7 +47,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     IntoComponent,
     SkillsComponent,
     ProjectsComponent,
-    ServicesProvidedComponent
+    ServicesProvidedComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

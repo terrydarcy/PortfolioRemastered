@@ -1,42 +1,44 @@
-<mat-card class="info-container">
+<div class="info-container">
 
-    <div class="intro-profile">
-        <img src="../../assets/profile.jpg" alt="Terry D'Arcy profile picture" class="intro-profile-image primary_border">
-        <div style ="display:flex; flex-direction:row; justify-content:center;">
-            <button mat-icon-button class="intro-button">
-                <fa-icon class="accent" [icon]="faInstagram" size="2x" style="margin:0"></fa-icon>
-            </button>
-            <button mat-icon-button class="intro-button">
-                <fa-icon class="accent"  [icon]="faTwitter" size="2x" style="margin:0;"></fa-icon>
-            </button>
-            <button mat-icon-button class="intro-button">
-                <fa-icon class="accent" [icon]="faYoutube" size="2x" style="margin:0"></fa-icon>
-            </button>
+<mat-card>
+        <div class="intro-profile">
+            <img src="../../assets/profile.jpg" alt="Terry D'Arcy profile picture" class="intro-profile-image primary_border">
+            <div style ="display:flex; flex-direction:row; justify-content:center;">
+                <button mat-icon-button class="intro-button">
+                    <fa-icon class="accent" [icon]="faInstagram" size="2x" style="margin:0"></fa-icon>
+                </button>
+                <button mat-icon-button class="intro-button">
+                    <fa-icon class="accent"  [icon]="faTwitter" size="2x" style="margin:0;"></fa-icon>
+                </button>
+                <button mat-icon-button class="intro-button">
+                    <fa-icon class="accent" [icon]="faYoutube" size="2x" style="margin:0"></fa-icon>
+                </button>
+            </div>
         </div>
-    </div>
         
-    <div class="bio">
-        <h1 style="font-weight:bold; margin: 0px;">Terry D'Arcy</h1>
-        <table class="intro-table">
-            <tr>
-                <td><angular-emojis [name]="'briefcase'" size="20"> </angular-emojis></td>
-                <td> <h2 style="margin:0px;">Full Stack Software Engineer</h2></td>
-            </tr>
-            <tr>
-            <td> <h1 style="margin:0">👨‍🎓</h1></td>
-            <td> <h2 style="margin:0px;">Bachelor of Science Degree<br/>
-                    Computer Science & Software Engineering</h2></td>
+        <div class="bio">
+            <h1 style="font-weight:bold; margin: 0px;">Terry D'Arcy</h1>
+            <table class="intro-table">
+                <tr>
+                    <td><angular-emojis [name]="'briefcase'" size="20"> </angular-emojis></td>
+                    <td> <h3 style="margin:0px;">Full Stack Software Engineer</h3></td>
+                </tr>
+                <tr>
+                    <td> <h1 style="margin:0">👨‍🎓</h1></td>
+                    <td> <h3 style="margin:0px;">Bachelor of Science Degree<br/>
+                        Computer Science & Software Engineering</h3></td>
             </tr>
             <tr>
                 <td style="display:flex; margin: 0px;"> <angular-emojis [name]="'round_pushpin'" size="20"> </angular-emojis></td>
-                <td><h2 style="margin:0px;">Dublin, Ireland</h2></td>
+                <td><h3 style="margin:0px;">Dublin, Ireland</h3></td>
             </tr>
         </table>
-
+        
         <button mat-raised-button color="primary" style="margin-right: 10px;"> Book for work</button>
         <button mat-raised-button color="primary"> Contact</button>
-         
+        
     </div>
 </mat-card>
+</div>
 
     
