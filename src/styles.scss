@@ -88,6 +88,12 @@ body {
   color: white;
 }
 
+.background-accent {
+  background-color: mat.get-color-from-palette(
+    $portfolio-remastered-accent,
+  ) !important; 
+}
+
 .primary_border {
   border-color: mat.get-color-from-palette($portfolio-remastered-primary) !important;
 }

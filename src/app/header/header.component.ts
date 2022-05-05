@@ -7,6 +7,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { ScrollToService } from '../services/scroll-to.service';
 import { scrollToEnum } from '../models/Interfaces';
 var scrollToElement = require('scroll-to-element');
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -21,8 +22,11 @@ export class HeaderComponent implements OnInit {
   parentRef = this.overlay.getContainerElement().parentElement;
   darkModeLocal: boolean = localStorage.getItem('darkMode') === 'true' ? true : false;
   scrollToEnum = scrollToEnum;
+  isProduction: boolean = false;
 
-  constructor(public overlay: OverlayContainer, public dialog: MatDialog, private cdr: ChangeDetectorRef, private ScrollToService: ScrollToService) {}
+  constructor(public overlay: OverlayContainer, public dialog: MatDialog, private cdr: ChangeDetectorRef, private ScrollToService: ScrollToService) {
+    this.isProduction = environment.production;
+  }
   
   ngOnInit(): void {
     this.setDarkModeFromLocalStorage();
@@ -49,7 +53,6 @@ export class HeaderComponent implements OnInit {
   resetScroll() {
     let body = document.getElementsByTagName('body')[0];
     scrollToElement(body, { offset: -70, ease: 'inQuad', duration: 300 });
-
   }
 
   setDarkModeFromLocalStorage = () => {

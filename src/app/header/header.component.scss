@@ -1,3 +1,16 @@
+.production-warning {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    color: black;
+    font-size: 16px;
+  }
+}
+
 mat-toolbar {
   display: flex;
   align-items: center;
@@ -6,47 +19,47 @@ mat-toolbar {
   position: sticky;
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
- 
+
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight:  800;
-   }
+    font-weight: 800;
+  }
 
-  .home-button-container{
-    display: flex; 
-    flex-direction: row; 
-    justify-content:flex-start; 
-    align-items: flex-start; 
+  .home-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .home-button {
-     padding: 5px;
+    padding: 5px;
 
-     span {
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+
+      fa-icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: row;
+        margin-right: 5px;
+      }
 
-        fa-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: 5px;
-        }
-
-        h1 {
-          font-size: 25px; 
-          margin-right:6px;
-          font-weight: bold;
-        }
-        img {
-          margin-right: 5px;
-        }
-     }
-   }
+      h1 {
+        font-size: 25px;
+        margin-right: 6px;
+        font-weight: bold;
+      }
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
 }
 
 mat-slide-toggle {
@@ -55,13 +68,12 @@ mat-slide-toggle {
 }
 
 .dark-mode-toggle {
-  display:flex; 
-  align-items:flex-end; 
+  display: flex;
+  align-items: flex-end;
   justify-content: flex-end;
   padding: 5px;
   padding-left: 15px;
   border-radius: 20px;
-
 }
 
 .flex-stretch {
@@ -89,13 +101,21 @@ mat-menu {
   justify-content: center;
 
   button {
-    margin-left:5px;
+    margin-left: 5px;
   }
 }
 
-.mobile-toggle{ display: none; }
-.web-toggle{ display: flex; }
+.mobile-toggle {
+  display: none;
+}
+.web-toggle {
+  display: flex;
+}
 @media only screen and (max-width: 800px) {
-  .mobile-toggle{ display: flex; }
-  .web-toggle{ display: none; }
+  .mobile-toggle {
+    display: flex;
+  }
+  .web-toggle {
+    display: none;
+  }
 }
