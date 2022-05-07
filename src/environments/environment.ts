@@ -11,6 +11,7 @@ export const environment = {
     authDomain: 'dev-notes-a7a54.firebaseapp.com',
     messagingSenderId: '480743411254',
     measurementId: 'G-E5PJB5MZ7R',
+    ga: 'G-TGZW65KX7N'
   },
   production: false
 };

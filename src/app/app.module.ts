@@ -12,7 +12,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
  import { HeaderComponent } from './header/header.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
+import {MatInputModule, } from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
@@ -36,7 +36,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ServicesProvidedComponent } from './home/services-provided/services-provided.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './home/experience/experience.component';
- 
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from 'ngx-google-analytics';
+import { BookingModalComponent } from './modals/booking-modal/booking-modal.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { ExperienceComponent } from './home/experience/experience.component';
     SkillsComponent,
     ProjectsComponent,
     ServicesProvidedComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    BookingModalComponent
   ],
   imports: [
     BrowserModule,
@@ -60,12 +63,15 @@ import { ExperienceComponent } from './home/experience/experience.component';
     MatButtonModule,
     HttpClientModule,
     MatGridListModule,
+    NgxGoogleAnalyticsRouterModule, 
+    NgxGoogleAnalyticsModule.forRoot(environment.firebase.ga),
     FontAwesomeModule,
     MatToolbarModule,
     MatChipsModule,
     MatSlideToggleModule,
     AngularEmojisModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatDividerModule,
     MatExpansionModule,
     ToastrModule.forRoot({

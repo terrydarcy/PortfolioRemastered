@@ -1,14 +1,14 @@
 import { Component, HostBinding, OnInit, ChangeDetectorRef} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { ScrollToService } from '../services/scroll-to.service';
 import { scrollToEnum } from '../models/Interfaces';
 var scrollToElement = require('scroll-to-element');
 import { environment } from 'src/environments/environment';
-
+import { BookingModalComponent } from '../modals/booking-modal/booking-modal.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -53,6 +53,16 @@ export class HeaderComponent implements OnInit {
   resetScroll() {
     let body = document.getElementsByTagName('body')[0];
     scrollToElement(body, { offset: -70, ease: 'inQuad', duration: 300 });
+  }
+
+  openBookingModal() {
+    this.dialog.open(BookingModalComponent, {
+      width: '400px',
+     height: '500px',
+      data: {
+        animal: 'panda',
+      },
+    });
   }
 
   setDarkModeFromLocalStorage = () => {

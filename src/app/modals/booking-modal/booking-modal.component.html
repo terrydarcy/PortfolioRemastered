@@ -1,0 +1,32 @@
+<div class="booking-modal">
+    <h2 mat-dialog-title>Book Terry D'Arcy</h2>
+    <mat-card-subtitle>I am currently available for development work so please feel free 
+        to get in touch below and I will get back to you ASAP.</mat-card-subtitle>
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>name</mat-label>
+            <input matInput  placeholder="Name" [formControl]="name" />
+        </mat-form-field>
+            
+        <mat-form-field appearance="fill">
+            <mat-label>email</mat-label>
+            <input matInput placeholder="Email" [formControl]="email" />
+        </mat-form-field>
+            
+        <mat-form-field appearance="fill">
+            <mat-label>job</mat-label>
+            <textarea rows="4" cols="50" matInput placeholder="Tell me more about your idea/project" [formControl]="job"></textarea>
+        </mat-form-field>
+    </form>
+
+    <mat-dialog-actions>
+        <button mat-raised-button color="warn" style="margin-right: 10px" (click)="close()">Close</button>
+        <button mat-raised-button color="primary" [disabled]="
+        email.hasError('required')
+        || email.hasError('email')
+        || name.hasError('required')
+        || job.hasError('required')">
+        Send Request
+    </button>
+    </mat-dialog-actions>
+</div>
