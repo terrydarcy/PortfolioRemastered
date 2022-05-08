@@ -33,6 +33,8 @@
             ],
             "styles": [
               "src/styles.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
               "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [],

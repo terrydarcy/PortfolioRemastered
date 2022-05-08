@@ -4,13 +4,13 @@
         <div class="intro-profile">
             <img src="../../assets/profile.jpg" alt="Terry D'Arcy profile picture" class="intro-profile-image primary_border">
             <div style ="display:flex; flex-direction:row; justify-content:center;">
-                <button mat-icon-button class="intro-button">
+                <button mat-icon-button class="intro-button" (click)="goToURL(instagramURL)">
                     <fa-icon class="accent" [icon]="faInstagram" size="2x" style="margin:0"></fa-icon>
                 </button>
-                <button mat-icon-button class="intro-button">
+                <button mat-icon-button class="intro-button" (click)="goToURL(twitterURL)">
                     <fa-icon class="accent"  [icon]="faTwitter" size="2x" style="margin:0;"></fa-icon>
                 </button>
-                <button mat-icon-button class="intro-button">
+                <button mat-icon-button class="intro-button" (click)="goToURL(youtubeURL)">
                     <fa-icon class="accent" [icon]="faYoutube" size="2x" style="margin:0"></fa-icon>
                 </button>
             </div>

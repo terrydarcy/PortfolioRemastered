@@ -16,7 +16,8 @@ $custom-typography: mat.define-typography-config(
 );
 
 * {
-  font-family: "Inconsolata"
+  font-family: "Inconsolata";
+  box-sizing: border-box;
 }
 $portfolio-remastered-primary: mat.define-palette(
   mat.$blue-palette,

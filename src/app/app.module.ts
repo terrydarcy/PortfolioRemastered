@@ -39,8 +39,12 @@ import { ExperienceComponent } from './home/experience/experience.component';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from 'ngx-google-analytics';
 import { BookingModalComponent } from './modals/booking-modal/booking-modal.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { SpotlightedProjectsComponent } from './home/spotlighted-projects/spotlighted-projects.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 
-@NgModule({
+ @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -51,13 +55,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ProjectsComponent,
     ServicesProvidedComponent,
     ExperienceComponent,
-    BookingModalComponent
+    BookingModalComponent,
+    SpotlightedProjectsComponent
   ],
   imports: [
     BrowserModule,
     MatCardModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
+    WavesModule,
+    CarouselModule,
     FormsModule,
     AppRoutingModule,
     MatButtonModule,
@@ -68,12 +75,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FontAwesomeModule,
     MatToolbarModule,
     MatChipsModule,
+    MDBBootstrapModule,
+    MDBBootstrapModule.forRoot(),
     MatSlideToggleModule,
     AngularEmojisModule,
     MatDialogModule,
     MatFormFieldModule,
     MatDividerModule,
     MatExpansionModule,
+    IvyCarouselModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       positionClass: 'toast-top-right',
