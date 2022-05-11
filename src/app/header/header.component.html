@@ -30,8 +30,11 @@
     </div>
     
     <div class="dark-mode-toggle flex-stretch">
-      <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
-      <mat-icon *ngIf="!isDarkMode" class="mr-8">wb_sunny</mat-icon>
+      <!-- <div class="bounce-1"> -->
+
+        <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
+        <mat-icon *ngIf="!isDarkMode" class="mr-8">wb_sunny</mat-icon>
+      <!-- </div> -->
       <mat-slide-toggle [formControl]="toggleControl" class="mr-3"></mat-slide-toggle>
     </div>
   </mat-toolbar-row>

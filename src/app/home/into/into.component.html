@@ -20,6 +20,18 @@
           ></fa-icon>
         </button>
         <button
+        mat-icon-button
+        class="intro-button"
+        (click)="goToURL(githubURL)"
+      >
+        <fa-icon
+          class="accent"
+          [icon]="faGithub"
+          size="2x"
+          style="margin: 0"
+        ></fa-icon>
+      </button>
+        <button
           mat-icon-button
           class="intro-button"
           (click)="goToURL(instagramURL)"
@@ -43,18 +55,7 @@
             style="margin: 0"
           ></fa-icon>
         </button>
-        <button
-        mat-icon-button
-        class="intro-button"
-        (click)="goToURL(githubURL)"
-      >
-        <fa-icon
-          class="accent"
-          [icon]="faGithub"
-          size="2x"
-          style="margin: 0"
-        ></fa-icon>
-      </button>
+       
       </div>
     </div>
 
@@ -93,3 +94,4 @@
     </div>
   </mat-card>
 </div>
+ 

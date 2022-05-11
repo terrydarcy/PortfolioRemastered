@@ -69,11 +69,24 @@ mat-slide-toggle {
 
 .dark-mode-toggle {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   padding: 5px;
   padding-left: 15px;
   border-radius: 20px;
+}
+.bounce-1 {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(2px); }
+  100% { transform: translateY(0px); }
 }
 
 .flex-stretch {
