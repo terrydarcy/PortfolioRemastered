@@ -60,6 +60,7 @@
 
     .skill-chip::after {
       background: none !important;  // color that you want on hover
+      box-shadow: inset 0 0 0 1px #000;
     }
 
     .mat-card-header {

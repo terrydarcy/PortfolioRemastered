@@ -15,7 +15,7 @@ import { BookingModalComponent } from '../modals/booking-modal/booking-modal.com
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  isDarkMode: boolean = true;
+  isDarkMode: boolean = false;
   faCode = faCode as IconProp;
   toggleControl = new FormControl(false);
   @HostBinding('class') className = '';
@@ -29,7 +29,6 @@ export class HeaderComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.toggleControl.enable();
     this.setDarkModeFromLocalStorage();
     this.toggleControl.valueChanges.subscribe((darkMode) => {
       const darkClassName = 'darkMode';
@@ -67,8 +66,9 @@ export class HeaderComponent implements OnInit {
   }
 
   setDarkModeFromLocalStorage = () => {
+    if(!localStorage.getItem('darkMode') && this.parentRef) this.darkModeLocal = true;
+  
     if (this.darkModeLocal && this.parentRef) {
-      this.cdr.detectChanges();
       this.toggleControl.setValue(this.darkModeLocal);
       this.parentRef.classList.add('darkMode');
       this.isDarkMode = true;
@@ -76,5 +76,6 @@ export class HeaderComponent implements OnInit {
       this.parentRef.classList.remove('darkMode');
       this.isDarkMode = false;
     }
+    this.cdr.detectChanges();
   };
 }
