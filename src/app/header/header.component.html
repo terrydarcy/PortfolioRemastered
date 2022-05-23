@@ -10,7 +10,6 @@
           <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.SERVICES)">SERVICES</button>
           <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.PROJECTS)">PROJECTS</button>
           <!-- <button mat-menu-item (click)="openBookingModal()">BOOK FOR WORK</button> -->
-
         </mat-menu>
       </div>
       
@@ -37,8 +36,5 @@
       <!-- </div> -->
       <mat-slide-toggle [formControl]="toggleControl" class="mr-3"></mat-slide-toggle>
     </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row class="production-warning background-accent" *ngIf="isProduction"> 
-    <p> Early build. Expect bugs & unfinished features ;)</p>
   </mat-toolbar-row>
 </mat-toolbar>
