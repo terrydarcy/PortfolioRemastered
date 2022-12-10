@@ -21,17 +21,17 @@
           ></fa-icon>
         </button>
         <button
-        mat-icon-button
-        class="intro-button"
-        (click)="goToURL(githubURL)"
-      >
-        <fa-icon
-          class="accent"
-          [icon]="faGithub"
-          size="2x"
-          style="margin: 0"
-        ></fa-icon>
-      </button>
+          mat-icon-button
+          class="intro-button"
+          (click)="goToURL(githubURL)"
+        >
+          <fa-icon
+            class="accent"
+            [icon]="faGithub"
+            size="2x"
+            style="margin: 0"
+          ></fa-icon>
+        </button>
         <button
           mat-icon-button
           class="intro-button"
@@ -56,23 +56,18 @@
             style="margin: 0"
           ></fa-icon>
         </button>
-       
       </div>
     </div>
 
     <div class="bio">
       <h1 style="font-weight: bold; margin: 0px">Terry D'Arcy</h1>
       <table class="intro-table">
-          <tr>
-              <td>
-                  <angular-emojis [name]="'briefcase'" size="20"> </angular-emojis>
-                </td>
-                <td><h3 style="margin: 0px">Full Stack Software Engineer</h3></td>
-            </tr>
-            <tr>
-              <td><mat-icon class="mr-8" color="accent">bedtime</mat-icon></td>
-              <td><h3 style="margin: 0px">Dark Mode Enthusiast</h3></td>
-            </tr>
+        <tr>
+          <td>
+            <angular-emojis [name]="'briefcase'" size="20"> </angular-emojis>
+          </td>
+          <td><h3 style="margin: 0px">Full Stack Software Engineer</h3></td>
+        </tr>
         <tr>
           <td><h1 style="margin: 0">👨‍🎓</h1></td>
           <td>
@@ -90,10 +85,11 @@
           <td><h3 style="margin: 0px">Dublin, Ireland</h3></td>
         </tr>
       </table>
-
-      <button mat-raised-button (click)="goToURL(linkedinURL)" color="primary">Connect with me on Linkedin!</button>
+      <button mat-raised-button (click)="goToURL(linkedinURL)" color="primary">
+        Click to connect on Linkedin!
+      </button>
     </div>
   </mat-card>
 </div>
+
 <!-- <app-experience></app-experience> -->
- 

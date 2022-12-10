@@ -4,7 +4,7 @@
   align-items: space-evenly;
   justify-content: center;
   flex-wrap: wrap;
-  margin:10px;
+  margin: 10px;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -15,6 +15,36 @@
   min-width: 300px;
   flex-grow: 1;
   max-width: 800px;
+  margin-bottom: 0px;
+
+  .compango-logo {
+    border-radius: 50%;
+    border: 3px solid;
+  }
+
+  mat-card-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+  }
+}
+a {
+  color: #ff922f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.aws-card {
+  margin: 5px;
+  flex: 1;
+  min-width: 200px;
+  flex-grow: 1;
+  max-width: 600px;
   margin-bottom: 0px;
 
   .compango-logo {

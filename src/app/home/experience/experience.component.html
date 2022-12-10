@@ -1,5 +1,58 @@
 <div class="title_container" style="margin-top: 30px">
   <div class="title_row">
+    <angular-emojis [name]="'scroll'" size="20"> </angular-emojis>
+    <h1 class="title_text">Certification</h1>
+  </div>
+</div>
+
+<div class="experience-container">
+  <mat-card class="aws-card">
+    <mat-card-title>
+      <img
+        src="../../assets/aws-certified-cloud-practitioner.png"
+        width="150px"
+        alt="Aws certification badge"
+      />
+
+      <div>
+        <span>AWS Cloud Practitioner Certification</span>
+        <mat-card-subtitle style="margin: 0">
+          <span>Valid: 12/2022 - 12/2023</span><br />
+        </mat-card-subtitle>
+        <mat-card-content>
+          <button
+            style="margin-top: 15px; margin-right: 10px"
+            mat-flat-button
+            color="accent"
+            (click)="
+              goToURL(
+                'https://aws.amazon.com/certification/certified-cloud-practitioner/'
+              )
+            "
+          >
+            Learn more
+          </button>
+          <!-- <span> Click below to verify my certification on credly </span> -->
+          <button
+            style="margin-top: 15px"
+            mat-flat-button
+            (click)="
+              goToURL(
+                'https://www.credly.com/badges/9087373f-bf4d-45cf-ae00-d2f501ef62fc/public_url'
+              )
+            "
+            color="primary"
+          >
+            Verify on Credly
+          </button>
+        </mat-card-content>
+      </div>
+    </mat-card-title>
+  </mat-card>
+</div>
+
+<div class="title_container" style="margin-top: 30px">
+  <div class="title_row">
     <angular-emojis [name]="'office'" size="20"> </angular-emojis>
     <h1 class="title_text">Companies I've Worked At</h1>
   </div>
@@ -8,7 +61,11 @@
 <div class="experience-container">
   <mat-card class="experience-card">
     <mat-card-title>
-      <img src="assets/vodafone.png" width="50" class="compango-logo primary_border" />
+      <img
+        src="assets/vodafone.png"
+        width="50"
+        class="compango-logo primary_border"
+      />
       <div>
         <span>Vodafone Ireland</span>
         <mat-card-subtitle style="margin: 0">
@@ -26,7 +83,11 @@
 
   <mat-card class="experience-card">
     <mat-card-title>
-      <img src="assets/accenture.png" width="50" class="compango-logo primary_border" />
+      <img
+        src="assets/accenture.png"
+        width="50"
+        class="compango-logo primary_border"
+      />
       <div>
         <span>Accenture Ltd</span>
         <mat-card-subtitle style="margin: 0">
