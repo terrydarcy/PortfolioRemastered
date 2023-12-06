@@ -1,18 +1,34 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-
     <div class="flex-stretch home-button-container">
       <div class="mobile-toggle nav-menu-list">
-        <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
-        
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+
         <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.SKILLS)">SKILLS</button>
-          <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.SERVICES)">SERVICES</button>
-          <button mat-menu-item (click)="setScrollToSubject(scrollToEnum.PROJECTS)">PROJECTS</button>
+          <button
+            mat-menu-item
+            (click)="setScrollToSubject(scrollToEnum.SKILLS)"
+          >
+            TECH
+          </button>
+          <button
+            mat-menu-item
+            (click)="setScrollToSubject(scrollToEnum.SERVICES)"
+          >
+            SERVICES
+          </button>
+          <button
+            mat-menu-item
+            (click)="setScrollToSubject(scrollToEnum.PROJECTS)"
+          >
+            PROJECTS
+          </button>
           <!-- <button mat-menu-item (click)="openBookingModal()">BOOK FOR WORK</button> -->
         </mat-menu>
       </div>
-      
+
       <button mat-button class="home-button" (click)="resetScroll()">
         <span>
           <fa-icon class="accent" [icon]="faCode" size="2x"></fa-icon>
@@ -20,21 +36,32 @@
         </span>
       </button>
     </div>
-    
+
     <div class="nav-menu-list flex-stretch web-toggle">
-      <button mat-button (click)="setScrollToSubject(scrollToEnum.SKILLS)">SKILLS</button>
-      <button mat-button (click)="setScrollToSubject(scrollToEnum.SERVICES)">SERVICES</button>
-      <button mat-button (click)="setScrollToSubject(scrollToEnum.PROJECTS)">PROJECTS</button>
+      <button mat-button (click)="setScrollToSubject(scrollToEnum.SKILLS)">
+        TECH
+      </button>
+      <button mat-button (click)="setScrollToSubject(scrollToEnum.SERVICES)">
+        SERVICES
+      </button>
+      <button mat-button (click)="setScrollToSubject(scrollToEnum.PROJECTS)">
+        PROJECTS
+      </button>
       <!-- <button mat-button (click)="openBookingModal()">BOOK FOR WORK</button> -->
     </div>
-    
+
     <div class="dark-mode-toggle flex-stretch">
       <!-- <div class="bounce-1"> -->
 
-        <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent">bedtime</mat-icon>
-        <mat-icon *ngIf="!isDarkMode" class="mr-8">wb_sunny</mat-icon>
+      <mat-icon *ngIf="isDarkMode" class="mr-8" color="accent"
+        >bedtime</mat-icon
+      >
+      <mat-icon *ngIf="!isDarkMode" class="mr-8">wb_sunny</mat-icon>
       <!-- </div> -->
-      <mat-slide-toggle [formControl]="toggleControl" class="mr-3"></mat-slide-toggle>
+      <mat-slide-toggle
+        [formControl]="toggleControl"
+        class="mr-3"
+      ></mat-slide-toggle>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
